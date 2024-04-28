@@ -1,14 +1,13 @@
 {
     "name": "JATE",
     "version": "1.0.0",
-    "description": "",
+    "description": "Text editor progressive web application featuring a number of persistent data techniques.",
     "main": "server.js",
     "scripts": {
         "server": "nodemon server.js --ignore client"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "Brian Wach",
+    "license": "MIT",
     "dependencies": {
         "express": "^4.17.1"
     },
