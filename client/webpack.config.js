@@ -11,7 +11,6 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      editor: './src/js/editor.js',
       install: './src/js/install.js'
     },
     output: {
