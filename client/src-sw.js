@@ -19,6 +19,21 @@ const pageCache = new CacheFirst({
   ],
 });
 
+// Define a CacheFirst strategy for static assets
+const staticAssetsCache = new CacheFirst({
+  cacheName: 'static-assets-cache',
+  plugins: [
+    // Ensure responses are cacheable (status codes 0 and 200)
+    new CacheableResponsePlugin({
+      statuses: [0, 200],
+    }),
+    // Set an expiration time for cached assets (e.g., 30 days)
+    new ExpirationPlugin({
+      maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
+    }),
+  ],
+});
+
 warmStrategyCache({
   urls: ['/index.html', '/'],
   strategy: pageCache,
